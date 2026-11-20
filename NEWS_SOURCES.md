@@ -18,9 +18,10 @@ item was checked against before it went on the page.
    (Science Media Centre and UN releases); Bangkok Post. Near-final
    texts eliminated the fossil-fuel transition; Pacific reaction.
 4. **Iran widens tanker war as oil slides** — The Japan Times;
-   Dawn; Daily Baku. Tanker fire after a mine strike east of the
-   Strait of Hormuz; Pentagon figure of over $48bn for the US war
-   cost, reported by Dawn.
+   Dawn; Daily Baku. Two tankers burning after mine strikes east
+   of the Strait of Hormuz (the mine claim is Iran's, and is
+   attributed to it on the page); Pentagon figure of over $48bn
+   for the US war cost, reported by Dawn.
 5. **Ukraine strikes Crimea Bridge again** — The Japan Times;
    Daily Baku; GT Daily. Putin refuses a sea or energy truce;
    ballistic missiles on Kyiv; Austrian and Dutch embassies damaged.
@@ -30,12 +31,16 @@ item was checked against before it went on the page.
    largest IPO in history.
 7. **Israel ends rare Gaza ground operation** — Bangkok Post; Scoop
    (Israeli embassy release). Withdrawal beyond the "Yellow Line";
-   nearly 65,000 approved tents awaiting entry into Gaza.
+   the Shelter Cluster count of roughly 64,000 approved tents
+   awaiting entry into Gaza is the figure used on the page
+   (other agencies cite higher counts).
 8. **EU and UK seek reset at Brussels summit** — BBC; Bangkok Post.
    Youth mobility scheme expected in the reset deal; summit hosted
    by Andy Burnham in Brussels.
-9. **Van Gogh sells for a record $190.4m** — Dawn. Record auction
-   price for the artist, reached after a dispute.
+9. **Europe's youth take to the streets** — Bangkok Post;
+   AppiSToS. Coordinated youth action across Europe over living
+   costs, housing and education, called for 20 November; Nobel
+   economist Joseph Stiglitz publicly backed the young protesters.
 10. **Voyager 1 nears one light-day from Earth** — The Manila
     Times; Bangkok Post (most-viewed list). NASA's farthest probe
     approaching the one light-day milestone.
@@ -54,7 +59,7 @@ item was checked against before it went on the page.
     Daily Baku.
 19. Genoa airport drone suspension — Daily Baku.
 20. Turkish court bars Istanbul mayor from 2028 race — GT Daily.
-21. Haiti police raid, at least 34 killed — GT Daily.
+21. Haiti police raid, at least 34 killed — GT Daily; Reuters.
 22. Florida record 20th execution of the year — GT Daily;
     The Manila Times.
 23. Antibiotics failing against common infections — UN News
@@ -69,8 +74,8 @@ item was checked against before it went on the page.
     Daily Baku.
 30. Magnitude 5.6 earthquake near New Caledonia — Daily Baku.
 31. Cyclone Xavier track updates — RSMC Nadi via AppiSToS.
-32. Islam forecast to become largest faith by 2035 — Dawn;
-    GT Daily.
+32. Van Gogh painting sells for a record $190.4m — Dawn. Record
+    auction price for the artist, reached after a dispute.
 33. Save the Children: a quarter of children in conflict zones —
     Le Monde.
 34. Bukele expected to formalise third-term bid — GT Daily.

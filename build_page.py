@@ -83,8 +83,8 @@ CARDS = [
     (
         "STRAIT OF HORMUZ · ENERGY",
         "Iran widens tanker war as oil slides",
-        "Tanker burns after a mine strike east of Hormuz; US war "
-        "cost put over $48bn.",
+        "Two tankers burn after mine strikes east of Hormuz, Iran "
+        "says; US war cost put over $48bn.",
         "JAPAN TIMES · DAWN",
         "tanker",
     ),
@@ -107,8 +107,8 @@ CARDS = [
     (
         "GAZA · MIDDLE EAST",
         "Israel ends rare Gaza ground operation",
-        "Troops pull back past the \u201cYellow Line\u201d; 65,000 winter "
-        "tents still await entry.",
+        "Troops pull back past the \u201cYellow Line\u201d; Shelter Cluster "
+        "counts ~64,000 tents waiting.",
         "BANGKOK POST · SCOOP",
         "tent",
     ),
@@ -121,11 +121,12 @@ CARDS = [
         "stars",
     ),
     (
-        "AUCTION · ART",
-        "Van Gogh sells for a record $190.4m",
-        "Disputed canvas sets a new auction record for the artist.",
-        "DAWN",
-        "frame",
+        "EUROPE · PROTESTS",
+        "Europe's youth take to the streets",
+        "Coordinated protests over living costs; Stiglitz: the "
+        "young are right to be worried.",
+        "BANGKOK POST",
+        "crowd",
     ),
     (
         "DEEP SPACE · NASA",
@@ -156,18 +157,18 @@ LISTED = [
     "Georgia gas blast kills six",
     "Genoa airport halted by drones",
     "Istanbul mayor barred from 2028",
-    "Haiti raid kills 34 gang suspects",
+    "Haiti raid: at least 34 killed",
     "Florida's 20th execution of 2026",
     "UN: antibiotics failing patients",
     "AI reshapes e-government: UN",
     "Association needs no permit: UN",
-    "Trump pardons Pete Rose",
+    "Trump pardons Rose posthumously",
     "California probes Nvidia chips",
     "Saudi downs two Houthi drones",
     "French tower fire kills one",
     "5.6 quake near New Caledonia",
     "Cyclone Xavier in S. Pacific",
-    "Islam largest faith by 2035",
+    "Van Gogh sells for record $190.4m",
     "Quarter of children in war zones",
     "Bukele eyes third term",
     "Spain PM admits mistakes",
@@ -303,8 +304,11 @@ CONTINENTS = [
 # plain dots for listed stories.
 PINS_NUMBERED = [
     (1, 4.9, 52.1), (2, 114.1, 22.5), (4, 56.5, 26.5), (5, 31.5, 49.0),
-    (7, 34.3, 31.4), (8, 4.35, 50.85),
+    (6, -74.0, 40.7), (7, 34.3, 31.4), (8, 4.35, 50.85), (9, 10.0, 48.5),
 ]
+# Pixel nudges so near-coincident datelines stay readable (The Hague
+# sits almost on top of Brussels at this scale).
+PIN_OFFSETS = {1: (-10, -10), 8: (6, 7)}
 PINS_DOTS = [
     (90.4, 23.8), (45.3, 2.0), (29.0, 41.0), (-72.3, 18.5),
     (165.0, -21.5), (8.9, 44.4), (-84.0, 30.4), (44.8, 41.7),
@@ -331,6 +335,8 @@ def draw_map(draw, x0, y0, w, h):
     pin_font = font(SANS_BOLD, 10)
     for number, lon, lat in PINS_NUMBERED:
         px, py = project(lon, lat)
+        ox, oy = PIN_OFFSETS.get(number, (0, 0))
+        px, py = px + ox, py + oy
         r = 8
         draw.ellipse([px - r, py - r, px + r, py + r], fill=RED,
                      outline=(255, 255, 255), width=1)
@@ -468,6 +474,17 @@ def icon_satellite(draw, x, y, s):
              300, 60, fill=NAVY, width=2)
 
 
+def icon_crowd(draw, x, y, s):
+    heads = [(0.28, 0.40, 6), (0.52, 0.30, 7), (0.74, 0.42, 6)]
+    for i, (fx, fy, r) in enumerate(heads):
+        cx, cy = x + s * fx, y + s * fy
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r],
+                     fill=RED if i == 1 else NAVY)
+        draw.arc([cx - r - 3, cy + r - 2, cx + r + 3, cy + r + 12],
+                 180, 360, fill=RED if i == 1 else NAVY, width=3)
+    _line(draw, [(x + 6, y + s - 4), (x + s - 6, y + s - 4)], width=2)
+
+
 def icon_sprout(draw, x, y, s):
     cx = x + s / 2
     _line(draw, [(cx, y + s - 8), (cx, y + s * 0.34)], width=3)
@@ -484,6 +501,7 @@ ICONS = {
     "tanker": icon_tanker, "bridge": icon_bridge, "chart": icon_chart,
     "tent": icon_tent, "stars": icon_stars, "frame": icon_frame,
     "satellite": icon_satellite, "sprout": icon_sprout,
+    "crowd": icon_crowd,
 }
 
 
